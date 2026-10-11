@@ -50,10 +50,9 @@ body::before{
 ::-webkit-scrollbar-thumb{background:rgba(100,116,139,.22);border-radius:10px;border:3px solid transparent;background-clip:content-box}
 ::-webkit-scrollbar-thumb:hover{background:rgba(100,116,139,.42);background-clip:content-box}
 
-/* ============ LAYOUT ============ */
 .app{position:relative;z-index:1;display:grid;grid-template-columns:var(--sidebar) 1fr;height:100vh}
 
-/* ============ SIDEBAR ============ */
+/* SIDEBAR */
 .sidebar{
   background:linear-gradient(180deg,#ffffff 0%,#f8fafd 100%);
   border-right:1px solid var(--line); display:flex; flex-direction:column;
@@ -101,7 +100,7 @@ svg{max-width:100%;flex:0 0 auto}
 .save-state{font-size:.68rem;color:var(--txt-3);text-align:center;line-height:1.4}
 .save-state b{color:var(--ok);font-weight:600}
 
-/* ============ MAIN ============ */
+/* MAIN */
 .main{display:flex;flex-direction:column;overflow:hidden;min-width:0}
 .topbar{
   display:flex;align-items:center;gap:16px;padding:18px 30px;
@@ -124,7 +123,7 @@ svg{max-width:100%;flex:0 0 auto}
 .view{flex:1;overflow-y:auto;padding:26px 30px 80px;scroll-behavior:smooth}
 .wrap{max-width:1600px;margin:0 auto}
 
-/* ============ BUTTONS ============ */
+/* BOTÕES */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:7px;
   background:var(--panel);border:1px solid var(--line-2);color:var(--txt-2);
@@ -149,7 +148,7 @@ svg{max-width:100%;flex:0 0 auto}
 .btn.icon svg{width:15px;height:15px}
 .btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important}
 
-/* ============ CARDS ============ */
+/* CARDS */
 .card{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
   box-shadow:var(--shadow);position:relative;
@@ -188,7 +187,6 @@ svg{max-width:100%;flex:0 0 auto}
 .kpi.cyan .kpi-v{color:var(--cyan)} .kpi.purple .kpi-v{color:var(--purple)}
 .kpi-s{font-size:.7rem;color:var(--txt-3);margin-top:6px;display:block;position:relative;z-index:1}
 
-/* ---- ocorrência do dia anterior (Painel) ---- */
 .occ-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
 .occ-text{
   white-space:pre-wrap;font-size:.85rem;line-height:1.68;color:var(--txt-2);
@@ -202,7 +200,6 @@ svg{max-width:100%;flex:0 0 auto}
 }
 .occ-src svg{width:14px;height:14px;flex:0 0 auto}
 
-/* ---- abas internas (CFTV) ---- */
 .subtabs{display:flex;gap:4px;margin:2px 0 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .subtab{
   display:inline-flex;align-items:center;gap:8px;padding:11px 18px;cursor:pointer;
@@ -219,7 +216,6 @@ svg{max-width:100%;flex:0 0 auto}
 .subtab.on .cnt{background:var(--accent-soft);color:var(--accent)}
 .subtab .cnt.alert{background:var(--bad-soft);color:var(--bad)}
 
-/* ---- AÇÕES RÁPIDAS (Rotina) ---- */
 .acao-cats{display:flex;flex-direction:column;gap:24px;margin-top:8px}
 .acao-cat-t{display:flex;align-items:center;gap:9px;font-size:.7rem;font-weight:800;letter-spacing:.13em;
   text-transform:uppercase;color:var(--txt-3);margin-bottom:12px;padding-left:2px}
@@ -250,7 +246,6 @@ svg{max-width:100%;flex:0 0 auto}
 .acao-tx{display:block;min-width:0;flex:1}
 .acao-t{display:block;font-weight:700;font-size:.94rem;line-height:1.3;margin-bottom:4px;letter-spacing:-.01em}
 .acao-d{display:block;font-size:.78rem;color:var(--txt-3);line-height:1.45}
-/* cores por categoria */
 .acao-ic.acesso   {background:var(--accent-soft);border-color:rgba(79,70,229,.25);color:var(--accent)}
 .acao-ic.medico   {background:var(--ok-soft);    border-color:rgba(16,185,129,.28);color:var(--ok)}
 .acao-ic.elev     {background:var(--warn-soft);  border-color:rgba(245,158,11,.3); color:var(--warn)}
@@ -260,7 +255,6 @@ svg{max-width:100%;flex:0 0 auto}
 .acao-ic.limpeza  {background:var(--cyan-soft);  border-color:rgba(6,182,212,.3);  color:var(--cyan)}
 .acao-ic.pink     {background:var(--pink-soft);  border-color:rgba(236,72,153,.28);color:var(--pink)}
 
-/* ---- prévia do texto (modal) ---- */
 .previa-box{
   margin-top:18px;border:1px solid var(--line-2);border-radius:var(--r);
   background:linear-gradient(180deg,#fbfcff,#f5f7fe);padding:15px;
@@ -276,7 +270,6 @@ svg{max-width:100%;flex:0 0 auto}
 }
 .previa-txt:empty::before{content:'Preencha os campos para ver o texto pronto.';color:var(--txt-3)}
 
-/* ---- sugestões inteligentes (baseadas no histórico) ---- */
 .sug-wrap{margin-top:18px;border-top:1px dashed var(--line-2);padding-top:16px}
 .sug-head{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:800;text-transform:uppercase;
   letter-spacing:.1em;color:var(--txt-3);margin-bottom:10px}
@@ -292,7 +285,6 @@ svg{max-width:100%;flex:0 0 auto}
 .sug-txt{font-size:.78rem;color:var(--txt-2);line-height:1.5;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-/* ---- histórico de resumos ---- */
 .occ-list{max-height:520px;overflow:auto;margin-top:4px;display:flex;flex-direction:column;gap:8px}
 .occ-row{
   display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-sm);
@@ -311,7 +303,6 @@ svg{max-width:100%;flex:0 0 auto}
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:18px}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 
-/* ============ BADGES / PILLS ============ */
 .pill{
   display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;
   font-size:.67rem;font-weight:700;letter-spacing:.01em;white-space:nowrap;
@@ -335,7 +326,6 @@ svg{max-width:100%;flex:0 0 auto}
 .tag.SRV{background:var(--info-soft);color:var(--info)}
 .tag.MON{background:rgba(100,116,139,.13);color:var(--txt-2)}
 
-/* ============ TOOLBAR ============ */
 .tools{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
   padding:12px 14px;margin-bottom:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;
@@ -358,7 +348,6 @@ svg{max-width:100%;flex:0 0 auto}
 .seg button:hover{color:var(--txt)}
 .seg button.on{background:var(--panel);color:var(--accent);box-shadow:var(--shadow-sm)}
 
-/* ============ TABLE ============ */
 .tbl-wrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
 .tbl-scroll{overflow:auto;max-height:calc(100vh - 340px)}
 table{width:100%;border-collapse:collapse;font-size:.815rem}
@@ -382,20 +371,17 @@ td.acts .btn{padding:6px 9px}
 .rowbar{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;
   border-top:1px solid var(--line);font-size:.73rem;color:var(--txt-3);background:var(--panel-2)}
 
-/* ============ SWITCH ============ */
 .sw{position:relative;width:44px;height:24px;border-radius:20px;background:rgba(239,68,68,.4);cursor:pointer;transition:.22s var(--ease);border:none;flex-shrink:0;padding:0}
 .sw::after{content:'';position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.22s var(--ease);box-shadow:0 1px 4px rgba(0,0,0,.2)}
 .sw.on{background:var(--ok)}
 .sw.on::after{left:23px}
 
-/* ============ PROGRESS ============ */
 .bar{height:6px;border-radius:5px;background:rgba(100,116,139,.13);overflow:hidden;flex:1;min-width:60px}
 .bar i{display:block;height:100%;border-radius:5px;background:var(--grad);transition:width .4s var(--ease)}
 .bar i.done{background:linear-gradient(90deg,#10b981,#059669)}
 .bar-row{display:flex;align-items:center;gap:10px}
 .bar-row small{font-size:.72rem;color:var(--txt-3);font-weight:700;white-space:nowrap;min-width:38px;text-align:right}
 
-/* ============ CHECK / STEP LIST ============ */
 .steps{display:flex;flex-direction:column;gap:3px;margin-top:10px}
 .step{display:flex;align-items:flex-start;gap:11px;padding:10px 12px;border-radius:var(--r-sm);transition:.16s var(--ease);cursor:pointer;border:1px solid transparent}
 .step:hover{background:var(--accent-soft)}
@@ -411,7 +397,6 @@ td.acts .btn{padding:6px 9px}
 .step-t{font-size:.85rem;line-height:1.5;flex:1}
 .step-n{font-size:.7rem;color:var(--txt-3);font-weight:800;min-width:20px;margin-top:1px}
 
-/* ============ LIST ITEMS ============ */
 .item-list{display:flex;flex-direction:column;gap:10px}
 .item{
   background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;
@@ -433,14 +418,12 @@ td.acts .btn{padding:6px 9px}
 .item-m{font-size:.73rem;color:var(--txt-3);margin-top:4px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .item-acts{display:flex;gap:6px;flex-shrink:0;align-items:center}
 
-/* ============ STAT ROW ============ */
 .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:11px}
 .stat{text-align:center;padding:13px 8px;background:var(--panel-3);border-radius:var(--r-sm);border:1px solid var(--line)}
 .stat b{display:block;font-size:1.3rem;font-weight:800;color:var(--txt);line-height:1.1;letter-spacing:-.025em}
 .stat span{font-size:.61rem;text-transform:uppercase;letter-spacing:.08em;color:var(--txt-3);font-weight:800;margin-top:4px;display:block}
 .stat.ok b{color:var(--ok)} .stat.bad b{color:var(--bad)} .stat.warn b{color:var(--warn)}
 
-/* ============ MODAL ============ */
 .backdrop{
   position:fixed;inset:0;background:rgba(15,23,42,.55);backdrop-filter:blur(8px);z-index:200;
   display:grid;place-items:center;padding:24px;animation:fade .18s var(--ease);
@@ -462,7 +445,6 @@ td.acts .btn{padding:6px 9px}
 .x{background:transparent;border:none;color:var(--txt-3);cursor:pointer;font-size:1.4rem;line-height:1;padding:4px 8px;border-radius:8px;transition:.16s var(--ease)}
 .x:hover{background:var(--bad-soft);color:var(--bad)}
 
-/* ============ FORM ============ */
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fgrid .full{grid-column:1/-1}
 .field{display:flex;flex-direction:column;gap:7px}
@@ -476,7 +458,6 @@ td.acts .btn{padding:6px 9px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 .hintline{font-size:.73rem;color:var(--txt-3);margin-top:8px;line-height:1.55}
 
-/* ============ TOAST ============ */
 .toast{
   position:fixed;bottom:24px;right:24px;z-index:400;display:flex;align-items:center;gap:11px;
   background:var(--panel);border:1px solid var(--ok);color:var(--ok);
@@ -511,7 +492,6 @@ td.acts .btn{padding:6px 9px}
 .chip .d{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .d-ok{background:var(--ok)} .d-bad{background:var(--bad)} .d-ip{background:var(--info)} .d-an{background:var(--warn)}
 
-/* ============ RESPONSIVE ============ */
 @media(max-width:1080px){
   .app{grid-template-columns:78px 1fr}
   .brand-txt,.nav-label,.nav-item span.lbl,.nav-item .cnt{display:none}
@@ -520,39 +500,6 @@ td.acts .btn{padding:6px 9px}
   .side-foot{display:none}
   .fgrid{grid-template-columns:1fr}
 }
-@media(max-width:820px){
-  body{overflow:auto}
-  .app{display:block;height:auto}
-  .sidebar{position:sticky;top:0;z-index:100;flex-direction:row;overflow-x:auto;padding:10px 12px;
-    border-right:none;border-bottom:1px solid var(--line);gap:5px}
-  .brand,.nav-label{display:none}
-  .nav-item{width:auto;flex-shrink:0;padding:10px 14px}
-  .nav-item span.lbl{display:inline}
-  .main{height:auto}
-  .view{overflow:visible;padding:18px 16px 60px}
-  .tbl-scroll{max-height:none}
-  .topbar{flex-wrap:wrap;padding:14px 16px}
-  .page-head{flex-basis:100%}
-  .kpis{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-  .grid-2{grid-template-columns:1fr}
-  .acao-grid{grid-template-columns:1fr}
-}
-@media print{
-  .sidebar,.topbar,.tools,.item-acts,.btn{display:none!important}
-  body{overflow:visible;background:#fff;color:#000}
-  .app{display:block}
-  .card,.tbl-wrap{border:1px solid #ccc;box-shadow:none;background:#fff}
-}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-button,a,[data-act]{-webkit-tap-highlight-color:transparent}
-.btn,.nav-item,.chip,.subtab{touch-action:manipulation}
-.btn{min-height:38px}
-input,select,textarea{font-size:16px;max-width:100%}
-.occ-row{min-width:0;flex-wrap:wrap;align-items:flex-start;padding:14px}
-.occ-row .p{flex:1 1 100%;min-width:0;line-height:1.5;overflow-wrap:anywhere}
-.occ-row .d{min-width:0}
-.occ-text,.previa-txt{overflow-wrap:anywhere;word-break:normal}
-
 @media(max-width:820px){
   html,body{min-height:100%;height:auto}
   body{overflow-x:hidden;overflow-y:auto;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
@@ -611,6 +558,18 @@ input,select,textarea{font-size:16px;max-width:100%}
   .occ-row .occ-copy{grid-column:1/-1;width:100%;min-height:42px}
   .modal{max-width:calc(100vw - 20px);border-radius:20px}
 }
+@media print{
+  .sidebar,.topbar,.tools,.item-acts,.btn{display:none!important}
+  body{overflow:visible;background:#fff;color:#000}
+  .app{display:block}
+  .card,.tbl-wrap{border:1px solid #ccc;box-shadow:none;background:#fff}
+}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+button,a,[data-act]{-webkit-tap-highlight-color:transparent}
+.btn,.nav-item,.chip,.subtab{touch-action:manipulation}
+.btn{min-height:38px}
+input,select,textarea{font-size:16px;max-width:100%}
+.occ-text,.previa-txt{overflow-wrap:anywhere;word-break:normal}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -663,16 +622,14 @@ input,select,textarea{font-size:16px;max-width:100%}
 <input type="file" id="fileIn" accept=".json,application/json" hidden>
 <div id="modalHost"></div>
 <div id="toastHost"></div>
-<script id="seedData" type="application/json">__SEED_DATA__</script>
+<script id="seedData" type="application/json">{"cameras":[{"id":1,"n":"C ELEV AMARELO","ip":"192.168.1.32","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":2,"n":"141 HALL ELEV LOBY","ip":"192.168.1.41","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":3,"n":"G ESC ROL GOLDEN","ip":"192.168.1.42","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":4,"n":"LIP 96 TERREO AMARELO","ip":"192.168.1.43","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":5,"n":"158 RAMPA SAIDA","ip":"192.168.1.44","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":6,"n":"SOFAS LOBBY","ip":"192.168.1.45","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":7,"n":"L BAR LOBY","ip":"192.168.1.46","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":8,"n":"L PTZ 160","ip":"192.168.1.47","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":9,"n":"FOYER DO GOL 2","ip":"192.168.1.48","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":10,"n":"L RECEP","ip":"192.168.1.49","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":11,"n":"C HALL ELEV AMA","ip":"192.168.1.50","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":12,"n":"G SAIDA DE EMER","ip":"192.168.1.51","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":13,"n":"L WC","ip":"192.168.1.52","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":14,"n":"G JUMBAO VERDE","ip":"192.168.1.53","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":15,"n":"G ELEVADOR LARANJA","ip":"192.168.1.54","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":16,"n":"JUMBAO VERDE GOLDEN","ip":"192.168.1.55","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":17,"n":"PISO L RESTAURANTE","ip":"192.168.1.56","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":18,"n":"G FOYER 1","ip":"192.168.1.57","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":19,"n":"FOYER GOLDEN 5","ip":"192.168.1.58","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":20,"n":"L P GIR EXTERNA","ip":"192.168.1.59","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":21,"n":"L COR BUSINESS","ip":"192.168.1.60","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":22,"n":"L RAMPA ENTRADA","ip":"192.168.1.61","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":23,"n":"GOLDEN 3","ip":"192.168.1.62","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":24,"n":"G FOYER 6","ip":"192.168.1.63","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":25,"n":"G CORR CAMARIM","ip":"192.168.1.64","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":26,"n":"TERREO ELEV LARANJA","ip":"192.168.1.65","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":27,"n":"C HALL ELEV AMARELO","ip":"192.168.1.66","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":28,"n":"G FOYER 3","ip":"192.168.1.67","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":29,"n":"G FOYER 2","ip":"192.168.1.68","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":30,"n":"L REST INTERNA","ip":"192.168.1.69","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":31,"n":"M ELEV LARANJA","ip":"192.168.1.70","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":32,"n":"ACADEMIA 2","ip":"192.168.1.71","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":33,"n":"C CORRE BALROON 2","ip":"192.168.1.72","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":34,"n":"C CORR BALLROON 1","ip":"192.168.1.73","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":35,"n":"C HALL ELEV 13","ip":"192.168.1.74","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":36,"n":"M CORR MONET","ip":"192.168.1.75","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":37,"n":"SALA SIG","ip":"192.168.1.76","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":38,"n":"LOBY 15 ANDAR","ip":"192.168.1.77","t":"IP","s":"ok","p":"15º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":39,"n":"M CORR VOLP","ip":"192.168.1.78","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":40,"n":"C CORR BALLROON 3","ip":"192.168.1.79","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":41,"n":"C CORR TEATRO 2","ip":"192.168.1.80","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":42,"n":"CORR TEATRO 3","ip":"192.168.1.81","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":43,"n":"C1 CORREDOR 2","ip":"192.168.1.82","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":44,"n":"C 1 CORREDOR 1","ip":"192.168.1.83","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":45,"n":"C FOYER SANTOS","ip":"192.168.1.84","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":46,"n":"FOYER RJ","ip":"192.168.1.85","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":47,"n":"PISO C1 SALA BONEMI","ip":"192.168.1.86","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":48,"n":"C HALL GALERIA","ip":"192.168.1.87","t":"IP","s":"Parada","p":"C","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728000000000},{"id":49,"n":"CORR BALLRONN 4","ip":"192.168.1.88","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":50,"n":"C CORR TEATRO 3","ip":"192.168.1.89","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":51,"n":"C CORR BALROON 1","ip":"192.168.1.90","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":52,"n":"SALA EVENTOS","ip":"192.168.1.91","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":53,"n":"M CORR DEGAS","ip":"192.168.1.92","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":54,"n":"M JUMBAO VERDE","ip":"192.168.1.93","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":55,"n":"M ESCADA ROL","ip":"192.168.1.94","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":56,"n":"C SALA SÃO PAULO","ip":"192.168.1.95","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":57,"n":"M CORR PORTINARI","ip":"192.168.1.96","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":58,"n":"M HALL SOCIAL","ip":"192.168.1.97","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":59,"n":"C FOYER BALLROON","ip":"192.168.1.98","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":60,"n":"13A HALL DE SERV","ip":"192.168.1.99","t":"IP","s":"ok","p":"13º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":61,"n":"C SHAFT DE CFTV","ip":"192.168.1.100","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":62,"n":"C NEW ORLEANS","ip":"192.168.1.101","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":63,"n":"M CORR AREA TECN","ip":"192.168.1.102","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":64,"n":"M CORR CASA BLAN","ip":"192.168.1.103","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":65,"n":"L BAD ALMOX","ip":"192.168.1.104","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":66,"n":"C CORR TEATR ESQU","ip":"192.168.1.105","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":67,"n":"C CORR TEATR DIR","ip":"192.168.1.106","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":68,"n":"C CORR PALCO ESQ","ip":"192.168.1.107","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":69,"n":"C COR PALCO DIR","ip":"192.168.1.108","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":70,"n":"L BAD COZ FRIA","ip":"192.168.1.109","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":71,"n":"L BAD COZ QUENTE","ip":"192.168.1.110","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":72,"n":"L BAD VARANDA","ip":"192.168.1.111","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":73,"n":"L RESTAURANTE 2","ip":"192.168.1.112","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala TI","statusSince":1728300000000},{"id":74,"n":"C CURITIBA","ip":"192.168.1.113","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":75,"n":"G CAMARIN","ip":"192.168.1.114","t":"IP","s":"Parada","p":"G","mod":"ONVIF","local":"Piso C","statusSince":1728000000000},{"id":76,"n":"C BRASILIA","ip":"192.168.1.115","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":77,"n":"C TEATRO PLATEIA","ip":"192.168.1.116","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":78,"n":"ELEV TEATRO AMAR","ip":"192.168.1.117","t":"IP","s":"Parada","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728000000000},{"id":79,"n":"M HALL JUMBÃO","ip":"192.168.1.118","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":80,"n":"M ACADENIA","ip":"192.168.1.119","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":81,"n":"M GAUGUIN","ip":"192.168.1.120","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":82,"n":"M CHAGAL","ip":"192.168.1.121","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":83,"n":"C SANTOS 2","ip":"192.168.1.122","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":84,"n":"M SALA DILUIDOR","ip":"192.168.1.123","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":85,"n":"C1 PANAMA","ip":"192.168.1.124","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":86,"n":"C1 VOLP","ip":"192.168.1.125","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":87,"n":"C1 VIVALD 2","ip":"192.168.1.126","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":88,"n":"C1 BOMENI","ip":"192.168.1.127","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":89,"n":"C1 VIVALD 1","ip":"192.168.1.128","t":"IP","s":"Parada","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728000000000},{"id":90,"n":"C SALVADOR 2","ip":"192.168.1.129","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":91,"n":"C SANTOS 1","ip":"192.168.1.130","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":92,"n":"C SALVADOR 1","ip":"192.168.1.131","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":93,"n":"C BACK BALLROON","ip":"192.168.1.132","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":94,"n":"C BALLROON 3","ip":"192.168.1.133","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":95,"n":"C BACK BALLROON 1","ip":"192.168.1.134","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":96,"n":"C FOYER SP","ip":"192.168.1.135","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":97,"n":"C SÃO PAULO 1","ip":"192.168.1.136","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":98,"n":"C BALLROON 4","ip":"192.168.1.137","t":"IP","s":"Parada","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728000000000},{"id":99,"n":"C CURITIBA 2","ip":"192.168.1.138","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":100,"n":"C ESPAÇO GALERIA","ip":"192.168.1.139","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":101,"n":"C SÃO PAULO 4","ip":"192.168.1.140","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":102,"n":"C SÃO PAULO 3","ip":"192.168.1.141","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":103,"n":"C SÃO PAULO 2","ip":"192.168.1.142","t":"IP","s":"Parada","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728000000000},{"id":104,"n":"C CORR TEATRO 1","ip":"192.168.1.143","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":105,"n":"C1 PARANAGUA","ip":"192.168.1.144","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":106,"n":"M GAUGUIN 2","ip":"192.168.1.145","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":107,"n":"C CURITIBA 1","ip":"192.168.1.146","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":108,"n":"G TI","ip":"192.168.1.147","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":109,"n":"16 ANDAR","ip":"192.168.1.148","t":"IP","s":"ok","p":"16º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":110,"n":"M MONET","ip":"192.168.1.149","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":111,"n":"10 B1","ip":"192.168.1.150","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":112,"n":"10 B3","ip":"192.168.1.151","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":113,"n":"M RENOIR","ip":"192.168.1.152","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":114,"n":"M DEGAS","ip":"192.168.1.153","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":115,"n":"M MAISSE","ip":"192.168.1.154","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":116,"n":"M TARSILA","ip":"192.168.1.155","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":117,"n":"M PORTINARI","ip":"192.168.1.156","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":118,"n":"10 B2","ip":"192.168.1.157","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":119,"n":"10 HALL SOCIAL","ip":"192.168.1.158","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":120,"n":"10 HALL SERVIÇO","ip":"192.168.1.159","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":121,"n":"10 10A2","ip":"192.168.1.160","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":122,"n":"10 A3","ip":"192.168.1.161","t":"IP","s":"ok","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728300000000},{"id":123,"n":"10 A1","ip":"192.168.1.162","t":"IP","s":"Parada","p":"10º","mod":"ONVIF","local":"Shaft 10º Andar","statusSince":1728000000000},{"id":124,"n":"M VOLP","ip":"192.168.1.163","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":125,"n":"M ESC ROLANTE","ip":"192.168.1.164","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":126,"n":"M CHAGAL 1","ip":"192.168.1.165","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":127,"n":"PTZ GOLDEN","ip":"192.168.1.166","t":"IP","s":"Parada","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728000000000},{"id":128,"n":"M ACESS FORUM","ip":"192.168.1.167","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":129,"n":"M AUX LIMPEZA","ip":"192.168.1.168","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":130,"n":"17 ANDAR","ip":"","t":"Analogica","s":"ok","p":"17º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":131,"n":"17 ANDAR CORR HELIPONTO","ip":"","t":"Analogica","s":"ok","p":"17º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":132,"n":"Hall Serv 16 andar","ip":"","t":"Analogica","s":"ok","p":"16º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":133,"n":"17 CORR CASA MAQUINAS","ip":"","t":"Analogica","s":"ok","p":"17º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":134,"n":"Asa A 14 Andar","ip":"","t":"Analogica","s":"ok","p":"14º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":135,"n":"Asa B14 Andar","ip":"","t":"Analogica","s":"ok","p":"14º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":136,"n":"Hal Serv 14 Andar","ip":"","t":"Analogica","s":"ok","p":"14º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":137,"n":"Asa A 15 Andar","ip":"","t":"Analogica","s":"ok","p":"15º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":138,"n":"Asa B 15 Andar","ip":"","t":"Analogica","s":"ok","p":"15º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":139,"n":"Hall Social 15 Andar","ip":"","t":"Analogica","s":"ok","p":"15º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":140,"n":"15 ANDAR HALL SERV","ip":"","t":"Analogica","s":"ok","p":"15º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":141,"n":"Asa A 11 Andar","ip":"","t":"Analogica","s":"ok","p":"11º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":142,"n":"11 ANDAR HALL SERV","ip":"","t":"Analogica","s":"ok","p":"11º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":143,"n":"11 ANDAR ASA B","ip":"","t":"Analogica","s":"ok","p":"11º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":144,"n":"ELEVADOR H6","ip":"","t":"Analogica","s":"ok","p":"19","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":145,"n":"ELEVADOR H7","ip":"","t":"Analogica","s":"ok","p":"19","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":146,"n":"12 ANDAR HALL SERV","ip":"","t":"Analogica","s":"ok","p":"12º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":147,"n":"12 ANDAR ASA A","ip":"","t":"Analogica","s":"ok","p":"12º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":148,"n":"12 ANDAR ASA B","ip":"","t":"Analogica","s":"ok","p":"12º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":149,"n":"ASA B 9 ANDAR","ip":"","t":"Analogica","s":"ok","p":"9º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":150,"n":"ELEVADOR H 5","ip":"","t":"Analogica","s":"Parada","p":"19","mod":"","local":"DVR Andares","statusSince":1728000000000},{"id":151,"n":"ASA A 9 ANDAR","ip":"","t":"Analogica","s":"ok","p":"9º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":152,"n":"AREA SERV 7 ANDAR","ip":"","t":"Analogica","s":"ok","p":"7º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":153,"n":"7 ANDAR ASA A","ip":"","t":"Analogica","s":"ok","p":"7º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":154,"n":"AREA SERV 9 ANDAR","ip":"","t":"Analogica","s":"ok","p":"9º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":155,"n":"7 ANDAR ASA B","ip":"","t":"Analogica","s":"ok","p":"7º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":156,"n":"8 Andar Asa A","ip":"","t":"Analogica","s":"ok","p":"8º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":157,"n":"8 andar Hall Serv","ip":"","t":"Analogica","s":"ok","p":"8º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":158,"n":"8 ANDAR ASA B","ip":"","t":"Analogica","s":"ok","p":"8º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":159,"n":"16 HALL SOCIAL","ip":"","t":"Analogica","s":"ok","p":"16º","mod":"","local":"DVR Andares","statusSince":1728300000000},{"id":160,"n":"L P1","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":161,"n":"L P 2","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":162,"n":"L DOCAS 1","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":163,"n":"L ENT DOCAS","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":164,"n":"L SALA Descanso","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":165,"n":"BUSINESS 1","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":166,"n":"BUSINESS 2","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":167,"n":"PISO M HALL SERV","ip":"","t":"Analogica","s":"ok","p":"M","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":168,"n":"S3 GOV1","ip":"","t":"Analogica","s":"ok","p":"S3","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":169,"n":"MALEIRO L","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":170,"n":"S2 WC FEMININO","ip":"","t":"Analogica","s":"ok","p":"S2","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":171,"n":"DOCAS 3","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":172,"n":"L PORT RECEPÇAO","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":173,"n":"PTZ LOBY","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":174,"n":"PISO S 3 GOV 2","ip":"","t":"Analogica","s":"ok","p":"S3","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":175,"n":"ACESSO BUSINNES","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":176,"n":"L ENTRADA GR","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":177,"n":"C JUMBAO VERDE","ip":"","t":"Analogica","s":"ok","p":"C","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":178,"n":"S3 RESTAURANTE","ip":"","t":"Analogica","s":"ok","p":"S3","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":179,"n":"L CORREDOR SEG","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":180,"n":"L BUSINNES CENTER","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":181,"n":"L CAIXA GERAL","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":182,"n":"L CORR T I","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":183,"n":"PISO C JUBAO V 2","ip":"","t":"Analogica","s":"ok","p":"C","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":184,"n":"PISO C JUMBAO V","ip":"","t":"Analogica","s":"ok","p":"C","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":185,"n":"CENTRAL SEG","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":186,"n":"ALMOX MANUT","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":187,"n":"MANUTENCAO 1","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":188,"n":"CAQ","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":189,"n":"CAQ 2","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":190,"n":"S2 CONFEITARIA","ip":"","t":"Analogica","s":"ok","p":"S2","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":191,"n":"ADM MANUTENÇÃO","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":192,"n":"S 2 WC MASC","ip":"","t":"Analogica","s":"ok","p":"S2","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":193,"n":"S2 AREA DESCANÇO","ip":"","t":"Analogica","s":"Parada","p":"S2","mod":"","local":"DVR Lazer","statusSince":1728000000000},{"id":194,"n":"RELOGIO DE PONTO","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":195,"n":"LAVANDERIA 1","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":196,"n":"LAVANDERIA 2","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":197,"n":"ADM MANUTENCAO","ip":"","t":"Analogica","s":"ok","p":"L","mod":"","local":"DVR Lazer","statusSince":1728300000000},{"id":198,"n":"Câmera Extra 1","ip":"192.168.1.200","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":199,"n":"Câmera Extra 2","ip":"192.168.1.201","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":200,"n":"Câmera Extra 3","ip":"192.168.1.202","t":"Analogica","s":"ok","p":"L","mod":"","local":"Sala de Segurança","statusSince":1728300000000},{"id":201,"n":"Câmera Extra 4","ip":"192.168.1.203","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":202,"n":"Câmera Extra 5","ip":"192.168.1.204","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":203,"n":"Câmera Extra 6","ip":"192.168.1.205","t":"Analogica","s":"ok","p":"C","mod":"","local":"Piso C","statusSince":1728300000000},{"id":204,"n":"Câmera Extra 7","ip":"192.168.1.206","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":205,"n":"Câmera Extra 8","ip":"192.168.1.207","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":206,"n":"Câmera Extra 9","ip":"192.168.1.208","t":"Analogica","s":"ok","p":"G","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":207,"n":"Câmera Extra 10","ip":"192.168.1.209","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":208,"n":"Câmera Extra 11","ip":"192.168.1.210","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":209,"n":"Câmera Extra 12","ip":"192.168.1.211","t":"Analogica","s":"ok","p":"M","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":210,"n":"Câmera Extra 13","ip":"192.168.1.212","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":211,"n":"Câmera Extra 14","ip":"192.168.1.213","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":212,"n":"Câmera Extra 15","ip":"192.168.1.214","t":"Analogica","s":"ok","p":"T","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":213,"n":"Câmera Extra 16","ip":"192.168.1.215","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":214,"n":"Câmera Extra 17","ip":"192.168.1.216","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":215,"n":"Câmera Extra 18","ip":"192.168.1.217","t":"Analogica","s":"ok","p":"L","mod":"","local":"Sala de Segurança","statusSince":1728300000000},{"id":216,"n":"Câmera Extra 19","ip":"192.168.1.218","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":217,"n":"Câmera Extra 20","ip":"192.168.1.219","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":218,"n":"Câmera Extra 21","ip":"192.168.1.220","t":"Analogica","s":"ok","p":"C","mod":"","local":"Piso C","statusSince":1728300000000},{"id":219,"n":"Câmera Extra 22","ip":"192.168.1.221","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":220,"n":"Câmera Extra 23","ip":"192.168.1.222","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":221,"n":"Câmera Extra 24","ip":"192.168.1.223","t":"Analogica","s":"ok","p":"G","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":222,"n":"Câmera Extra 25","ip":"192.168.1.224","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":223,"n":"Câmera Extra 26","ip":"192.168.1.225","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":224,"n":"Câmera Extra 27","ip":"192.168.1.226","t":"Analogica","s":"ok","p":"M","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":225,"n":"Câmera Extra 28","ip":"192.168.1.227","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":226,"n":"Câmera Extra 29","ip":"192.168.1.228","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":227,"n":"Câmera Extra 30","ip":"192.168.1.229","t":"Analogica","s":"ok","p":"T","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":228,"n":"Câmera Extra 31","ip":"192.168.1.230","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":229,"n":"Câmera Extra 32","ip":"192.168.1.231","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":230,"n":"Câmera Extra 33","ip":"192.168.1.232","t":"Analogica","s":"ok","p":"L","mod":"","local":"Sala de Segurança","statusSince":1728300000000},{"id":231,"n":"Câmera Extra 34","ip":"192.168.1.233","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":232,"n":"Câmera Extra 35","ip":"192.168.1.234","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":233,"n":"Câmera Extra 36","ip":"192.168.1.235","t":"Analogica","s":"ok","p":"C","mod":"","local":"Piso C","statusSince":1728300000000},{"id":234,"n":"Câmera Extra 37","ip":"192.168.1.236","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":235,"n":"Câmera Extra 38","ip":"192.168.1.237","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":236,"n":"Câmera Extra 39","ip":"192.168.1.238","t":"Analogica","s":"ok","p":"G","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":237,"n":"Câmera Extra 40","ip":"192.168.1.239","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":238,"n":"Câmera Extra 41","ip":"192.168.1.240","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":239,"n":"Câmera Extra 42","ip":"192.168.1.241","t":"Analogica","s":"ok","p":"M","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":240,"n":"Câmera Extra 43","ip":"192.168.1.242","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000},{"id":241,"n":"Câmera Extra 44","ip":"192.168.1.243","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":242,"n":"Câmera Extra 45","ip":"192.168.1.244","t":"Analogica","s":"ok","p":"T","mod":"","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":243,"n":"Câmera Extra 46","ip":"192.168.1.245","t":"IP","s":"ok","p":"C","mod":"ONVIF","local":"Piso C","statusSince":1728300000000},{"id":244,"n":"Câmera Extra 47","ip":"192.168.1.246","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":245,"n":"Câmera Extra 48","ip":"192.168.1.247","t":"Analogica","s":"ok","p":"L","mod":"","local":"Sala de Segurança","statusSince":1728300000000},{"id":246,"n":"Câmera Extra 49","ip":"192.168.1.248","t":"IP","s":"ok","p":"G","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":247,"n":"Câmera Extra 50","ip":"192.168.1.249","t":"IP","s":"ok","p":"T","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":248,"n":"Câmera Extra 51","ip":"192.168.1.250","t":"Analogica","s":"ok","p":"C","mod":"","local":"Piso C","statusSince":1728300000000},{"id":249,"n":"Câmera Extra 52","ip":"192.168.1.251","t":"IP","s":"ok","p":"M","mod":"ONVIF","local":"Shaft 1º Andar","statusSince":1728300000000},{"id":250,"n":"Câmera Extra 53","ip":"192.168.1.252","t":"IP","s":"ok","p":"L","mod":"ONVIF","local":"Sala de Segurança","statusSince":1728300000000}]}</script>
 <script>
 /* ============================================================
    Central de Operações — aplicação autônoma (offline)
-   Dados persistidos em localStorage. Sem dependências externas.
    ============================================================ */
 (function () {
 'use strict';
 
-/* ---------- ícones ---------- */
 var ICONS = {
   shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
   grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/>',
@@ -711,7 +668,6 @@ var ICONS = {
   info:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',
   upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/>',
   sparkle:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/>',
-  /* ações rápidas */
   cofre:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="10" cy="12" r="3.2"/><path d="M10 8.8V7M10 17v-1.8M6.8 12H5M15.2 12H14"/><path d="M17.4 6.8v10.4"/>',
   sala:'<path d="M3 21h18"/><path d="M5 21V8.5A1.5 1.5 0 0 1 6.5 7h11A1.5 1.5 0 0 1 19 8.5V21"/><rect x="7.6" y="10.4" width="8.8" height="5.8" rx="1"/><path d="M9.8 19h4.4"/>',
   acompanha:'<circle cx="7.6" cy="6.4" r="2.5"/><path d="M2.8 20.3v-1.7a4.8 4.8 0 0 1 9.6 0v1.7"/><circle cx="16.8" cy="7.4" r="2.1"/><path d="M14.6 18.8a4.2 4.2 0 0 1 6.6-3.5"/>',
@@ -730,8 +686,7 @@ var ICONS = {
   np:'<circle cx="12" cy="12" r="10"/><path d="m5 5 14 14"/>',
   manut:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/><path d="M9 15l-3 3"/>',
   porta:'<rect x="4" y="3" width="12" height="18" rx="1.5"/><circle cx="12.5" cy="12" r=".8" fill="currentColor"/><path d="M16 21h4"/>',
-  fogo:'<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.5-4 .5-5 .5 1 2 3 2 3 1.5-1.5 2-3 2-3 .5 1.5 1 3 1 5a5 5 0 0 1-5 5z"/><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5"/>',
-  criado:'<path d="M12 2v20M2 12h20"/>'
+  fogo:'<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.5-4 .5-5 .5 1 2 3 2 3 1.5-1.5 2-3 2-3 .5 1.5 1 3 1 5a5 5 0 0 1-5 5z"/><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5"/>'
 };
 function ic(n, cls) {
   var p = ICONS[n] || ICONS.grid;
@@ -740,7 +695,6 @@ function ic(n, cls) {
          'aria-hidden="true" focusable="false">' + p + '</svg>';
 }
 
-/* ---------- utilitários ---------- */
 function esc(s) {
   return s == null ? '' : String(s).replace(/[&<>"']/g, function (c) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -784,9 +738,21 @@ function sortBy(arr, k, dir) {
   });
 }
 
-/* ---------- armazenamento ---------- */
 var KEY = 'central_operacoes_v2';
-var SEED = JSON.parse(document.getElementById('seedData').textContent || '{}');
+/* Carregamento blindado: nunca derruba a aplicação se o JSON falhar. */
+var SEED = (function(){
+  try {
+    var el = document.getElementById('seedData');
+    var raw = (el ? el.textContent : '') || '{}';
+    raw = raw.trim();
+    if (!raw || raw.indexOf('__SEED_DATA__') >= 0) return {};
+    var p = JSON.parse(raw);
+    return (p && typeof p === 'object') ? p : {};
+  } catch (e) {
+    console.warn('Seed inválido — iniciando com estado vazio.', e);
+    return {};
+  }
+})();
 var S = null;
 
 function defaultState() {
@@ -952,7 +918,6 @@ function seedManuals() {
   ];
 }
 
-/* ---------- persistência ---------- */
 function load() {
   var raw = null;
   try { raw = localStorage.getItem(KEY); } catch (e) { raw = null; }
@@ -986,7 +951,6 @@ function setSaved() {
   if (el) el.innerHTML = '<b>●</b> Salvo às ' + new Date().toLocaleTimeString('pt-BR');
 }
 
-/* ---------- toast ---------- */
 function toast(msg, kind) {
   var host = document.getElementById('toastHost');
   var icons = { ok: 'ok', err: 'alert', info: 'info', warn: 'warn' };
@@ -1001,7 +965,6 @@ function toast(msg, kind) {
   }, kind === 'err' ? 4200 : 2600);
 }
 
-/* ---------- modal ---------- */
 function modal(opts) {
   var host = document.getElementById('modalHost');
   var fields = (opts.fields || []).map(function (f) {
@@ -1099,9 +1062,6 @@ function csv(rows) {
   }).join('\r\n');
 }
 
-/* ============================================================
-   PÁGINAS / NAVEGAÇÃO
-   ============================================================ */
 var PAGES = [
   { id: 'painel',       label: 'Painel',        icon: 'grid',   sub: 'Visão geral da operação, pendências e indicadores' },
   { id: 'rotina',       label: 'Rotina',        icon: 'check',  sub: 'Ações rápidas e tarefas diárias, semanais e mensais', btn: 'Nova tarefa', act: 'add-routine' },
@@ -1176,9 +1136,6 @@ function emptyBox(title, sub, icon) {
   return '<div class="empty">' + ic(icon || 'search') + '<b>' + esc(title) + '</b><span>' + esc(sub || '') + '</span></div>';
 }
 
-/* ============================================================
-   OCORRÊNCIAS — armazenamento e utilidades
-   ============================================================ */
 function occurrencesSorted() {
   var lista = (S.occurrences && S.occurrences.length) ? S.occurrences : seedOccurrences();
   return lista.slice().sort(function (a, b) {
@@ -1206,17 +1163,24 @@ function occurrenceText(o) {
     '\n\n' + (o.text || '');
 }
 
-/* ============================================================
-   PAINEL
-   ============================================================ */
 function viewPainel() {
-  var rs = routineStats(), es = eqStats();
+  var rs = routineStats(), es = eqStats(), cs = camStats();
   var crit = S.equipments.filter(function (e) { return e.status === 'critico'; });
   var pend = S.routines.filter(function (r) { return r.freq === 'Diária' && !isDone(r); });
   var feitasHoje = S.routines.filter(function (r) { return r.freq === 'Diária' && isDone(r); });
   var h = '';
 
-  /* 1. Ocorrência do dia anterior */
+  /* KPIs principais no topo */
+  h += '<div class="kpis">' +
+    kpi('Câmeras', String(cs.total), cs.on + ' on-line • ' + cs.off + ' off', cs.off ? 'warn' : 'ok', 'cam') +
+    kpi('Tarefas hoje', rs.done + '/' + rs.total, rs.total ? rs.pct + '% concluído' : 'sem tarefas', rs.pct === 100 && rs.total ? 'ok' : 'warn', 'check') +
+    kpi('Equipamentos', String(es.total), es.crit + ' crítico(s)', es.crit ? 'bad' : 'ok', 'server') +
+    kpi('Contatos', String(S.contacts.length), contactAreas().length + ' áreas', 'info', 'users') +
+    kpi('Procedimentos', String(S.procedures.length), procCats().length + ' categorias', 'purple', 'list') +
+    kpi('Manuais', String(S.manuals.length), 'documentos', 'cyan', 'book') +
+  '</div>';
+
+  /* ocorrência do dia anterior */
   var oc = previousOccurrence();
   var doWhats = oc && !(S.occurrences && S.occurrences.length);
   h += '<div class="grid-2 mt">';
@@ -1233,8 +1197,7 @@ function viewPainel() {
            (oc.autor ? '<span class="hint">por ' + esc(oc.autor) + '</span>' : '') +
          '</div>';
     h += '<div class="occ-text">' + esc(oc.text || '') + '</div>';
-    h += '<div class="occ-src">' + ic('info') + 'Fonte: ' + esc(oc.source || 'WhatsApp') +
-         (doWhats ? ' — último resumo disponível no arquivo.' : '') + '</div>';
+    h += '<div class="occ-src">' + ic('info') + 'Fonte: ' + esc(oc.source || 'WhatsApp') + '</div>';
   }
   var totalOc = occurrencesSorted().length;
   h += '<div class="item-acts" style="margin-top:14px;flex-wrap:wrap;gap:8px">' +
@@ -1248,7 +1211,7 @@ function viewPainel() {
   else if (host) { host.innerHTML = ''; host.setAttribute('hidden', ''); }
   h += '</div>';
 
-  /* 2. Tarefas de hoje */
+  /* tarefas de hoje */
   h += '<div class="card card-pad"><div class="sect-head" style="margin-top:0"><h2>' + ic('check') + 'Tarefas de hoje</h2>' +
        '<span class="hint">' + rs.done + ' de ' + rs.total + ' concluídas</span></div>';
   if (!S.routines.length) {
@@ -1272,7 +1235,7 @@ function viewPainel() {
   }
   h += '</div></div>';
 
-  /* 3. Técnico da Otis */
+  /* técnico da Otis */
   var ot = S.otis || defaultOtis();
   h += '<div class="grid-2 mt">';
   h += '<div class="card card-pad"><div class="sect-head" style="margin-top:0">' +
@@ -1291,18 +1254,25 @@ function viewPainel() {
        '<button class="btn sm" data-act="edit-otis">' + ic('edit') + 'Editar</button>' +
        '</div></div>';
 
-  /* 4. Indicadores */
-  h += '<div class="card card-pad"><div class="sect-head" style="margin-top:0"><h2>' + ic('server') + 'Indicadores</h2>' +
-       '<span class="hint">visão geral</span></div>';
-  h += '<div class="stat-row">' +
-       statBox('Equipamentos', String(es.total), es.crit + ' crítico(s)', es.crit ? 'warn' : 'ok') +
-       statBox('Contatos', String(S.contacts.length), contactAreas().length + ' áreas', 'info') +
-       statBox('Procedimentos', String(S.procedures.length), procCats().length + ' categorias', 'purple') +
-       statBox('Manuais', String(S.manuals.length), 'documentos', 'cyan') +
-       '</div></div>';
-  h += '</div>';
+  /* câmeras off-line (top 6) */
+  var camsOff = S.cameras.filter(function (c) { return !isOn(c.status); });
+  h += '<div class="card card-pad"><div class="sect-head" style="margin-top:0"><h2>' + ic('camera_off') + 'Câmeras off-line</h2>' +
+       '<span class="hint">' + camsOff.length + ' parada(s)</span></div>';
+  if (!camsOff.length) {
+    h += '<div class="item"><div class="item-ic ok">' + ic('ok') + '</div><div class="item-body"><div class="item-t">Nenhuma câmera off-line</div><div class="item-m">Todas operando.</div></div></div>';
+  } else {
+    h += '<div class="item-list">' + camsOff.slice(0, 6).map(function (c) {
+      return '<div class="item alert"><div class="item-ic bad">' + ic('camera_off') + '</div>' +
+        '<div class="item-body"><div class="item-t">' + esc(c.name) + '</div>' +
+        '<div class="item-m"><span class="mono">' + esc(c.ip || '—') + '</span>' +
+        '<span>' + esc(c.local || '—') + '</span>' +
+        '<span class="pill warn">' + ago(c.since) + '</span></div></div></div>';
+    }).join('') + '</div>';
+    if (camsOff.length > 6) h += '<button class="btn sm mt-s" data-act="go" data-page="cftv">Ver todas as ' + camsOff.length + ' off-line</button>';
+  }
+  h += '</div></div>';
 
-  /* 5. Equipamentos críticos + Rotina por área */
+  /* equipamentos críticos + rotina por área */
   h += '<div class="grid-2 mt">';
   h += '<div class="card card-pad"><div class="sect-head" style="margin-top:0"><h2>' + ic('server') + 'Equipamentos críticos</h2>' +
        '<span class="hint">' + crit.length + ' item(ns)</span></div>';
@@ -1328,7 +1298,7 @@ function viewPainel() {
   }).join('') + '</div>';
   h += '</div></div>';
 
-  /* 6. Manuais */
+  /* manuais */
   h += '<div class="sect-head mt"><h2>' + ic('book') + 'Documentos de referência</h2><span class="hint">manuais e guias</span></div>';
   h += '<div class="grid-3">' + S.manuals.slice(0, 6).map(manualCard).join('') + '</div>';
   return h;
@@ -1364,15 +1334,10 @@ function viewOccList() {
   return h;
 }
 
-/* ============================================================
-   AÇÕES RÁPIDAS — baseadas no histórico real do WhatsApp
-   ============================================================ */
 var ROTINA_ACOES = [
-  /* ---------- ACESSO ---------- */
-  {
-    id: 'cofre', cat: 'Acesso', tom: 'acesso', label: 'Abertura de cofre', icon: 'cofre',
+  { id: 'cofre', cat: 'Acesso', tom: 'acesso', label: 'Abertura de cofre', icon: 'cofre',
     desc: 'Liberação de quarto ou objeto esquecido no cofre da UH.',
-    fields: ['hora', 'por', 'unidade', 'solicitante', 'motivo', 'acompanhante', 'conteudo', 'obs'],
+    fields: ['hora','por','unidade','solicitante','motivo','acompanhante','conteudo','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' realizou abertura de cofre' +
         (a.unidade ? ', no ' + a.unidade : '') +
@@ -1382,10 +1347,9 @@ var ROTINA_ACOES = [
         (a.conteudo ? '. No interior do cofre: ' + a.conteudo : '') + '.';
     }
   },
-  {
-    id: 'porta', cat: 'Acesso', tom: 'acesso', label: 'Abertura de porta / UH', icon: 'porta',
+  { id: 'porta', cat: 'Acesso', tom: 'acesso', label: 'Abertura de porta / UH', icon: 'porta',
     desc: 'Porta aberta via Lock Service para hóspede ou governança.',
-    fields: ['hora', 'por', 'unidade', 'solicitante', 'motivo', 'acompanhante', 'obs'],
+    fields: ['hora','por','unidade','solicitante','motivo','acompanhante','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' realizou a abertura da porta' +
         (a.unidade ? ' do ' + a.unidade : '') +
@@ -1394,10 +1358,9 @@ var ROTINA_ACOES = [
         (a.acompanhante ? ', com acompanhamento de ' + a.acompanhante : '') + '.';
     }
   },
-  {
-    id: 'chave', cat: 'Acesso', tom: 'acesso', label: 'Liberação de chave', icon: 'chave',
-    desc: 'Chave do almoxarifado, 3PLS, sala, etc., liberada mediante autorização.',
-    fields: ['hora', 'por', 'qual', 'destinatario', 'setor', 'autorizado', 'horaDev', 'obs'],
+  { id: 'chave', cat: 'Acesso', tom: 'acesso', label: 'Liberação de chave', icon: 'chave',
+    desc: 'Chave do almoxarifado, 3PLS, sala etc., liberada com autorização.',
+    fields: ['hora','por','qual','destinatario','setor','autorizado','horaDev','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ' + a.por + ' realizou a liberação da chave ' + a.qual +
         (a.destinatario ? ' para ' + a.destinatario : '') +
@@ -1407,10 +1370,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  {
-    id: 'cracha', cat: 'Acesso', tom: 'acesso', label: 'Crachá — retirada/devolução', icon: 'cracha',
+  { id: 'cracha', cat: 'Acesso', tom: 'acesso', label: 'Crachá — retirada/devolução', icon: 'cracha',
     desc: 'Controle de crachá (refeitório, extra governança, extra segurança).',
-    fields: ['hora', 'por', 'quem', 'tipo', 'destino', 'horaDev', 'obs'],
+    fields: ['hora','por','quem','tipo','destino','horaDev','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ' + (a.quem || 'o(a) colaborador(a)') + ' retirou o crachá ' + (a.tipo || 'extra') +
         (a.destino ? ' para ' + a.destino : '') + '.';
@@ -1419,11 +1381,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  /* ---------- SAÚDE / EMERGÊNCIA ---------- */
-  {
-    id: 'ambulatorio', cat: 'Saúde', tom: 'medico', label: 'Atendimento médico / ambulatório', icon: 'acompanha',
+  { id: 'ambulatorio', cat: 'Saúde', tom: 'medico', label: 'Atendimento médico / ambulatório', icon: 'acompanha',
     desc: 'Pessoa acompanhada ao ambulatório após mal-estar.',
-    fields: ['hora', 'por', 'paciente', 'unidade', 'queixa', 'atendimento', 'desfecho', 'obs'],
+    fields: ['hora','por','paciente','unidade','queixa','atendimento','desfecho','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' atendeu ' + a.paciente +
         (a.unidade ? ' (' + a.unidade + ')' : '') +
@@ -1432,21 +1392,18 @@ var ROTINA_ACOES = [
         (a.desfecho ? '. ' + a.desfecho : '') + '.';
     }
   },
-  {
-    id: 'bombeiro', cat: 'Saúde', tom: 'seg', label: 'Acionamento de bombeiro / emergência', icon: 'fogo',
-    desc: 'Ocorrência de incêndio, fumaça, princípio de incêndio ou emergência.',
-    fields: ['hora', 'por', 'local', 'ocorrencia', 'acionado', 'desfecho', 'obs'],
+  { id: 'bombeiro', cat: 'Saúde', tom: 'seg', label: 'Acionamento de bombeiro / emergência', icon: 'fogo',
+    desc: 'Incêndio, fumaça, princípio de incêndio ou emergência.',
+    fields: ['hora','por','local','ocorrencia','acionado','desfecho','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' identificou ' + a.ocorrencia +
         (a.local ? ' no ' + a.local : '') + '. Foi acionado ' + a.acionado +
         (a.desfecho ? '. ' + a.desfecho : '') + '.';
     }
   },
-  /* ---------- ELEVADORES ---------- */
-  {
-    id: 'elevador_falha', cat: 'Elevadores', tom: 'elev', label: 'Elevador em NAV / PKS / DTC', icon: 'elevador',
+  { id: 'elevador_falha', cat: 'Elevadores', tom: 'elev', label: 'Elevador em NAV / PKS / DTC', icon: 'elevador',
     desc: 'Falha do elevador com acionamento do plantão da Otis.',
-    fields: ['hora', 'elevador', 'situacao', 'piso', 'tecnico', 'horaRetorno', 'obs'],
+    fields: ['hora','elevador','situacao','piso','tecnico','horaRetorno','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', o ' + a.elevador + ' entrou em ' + a.situacao +
         (a.piso ? ' pelo ' + a.piso : '') +
@@ -1456,24 +1413,21 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  {
-    id: 'elevador_bloq', cat: 'Elevadores', tom: 'elev', label: 'Bloqueio / desbloqueio de elevador', icon: 'lock',
-    desc: 'Bloqueio de elevadores por andar a pedido de eventos ou por solicitação.',
-    fields: ['hora', 'por', 'elevadores', 'piso', 'tipo', 'solicitante', 'horaFim', 'obs'],
+  { id: 'elevador_bloq', cat: 'Elevadores', tom: 'elev', label: 'Bloqueio / desbloqueio de elevador', icon: 'lock',
+    desc: 'Bloqueio de elevadores por andar a pedido de eventos.',
+    fields: ['hora','por','elevadores','piso','tipo','solicitante','horaFim','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ' + a.por + ' realizou ' + (a.tipo || 'o bloqueio') +
         ' ' + a.elevadores +
         (a.piso ? ' no ' + a.piso : '') +
         (a.solicitante ? ', a pedido de ' + a.solicitante : '') + '.';
-      if (a.horaFim) s += ' Realizado ' + (a.tipo === 'o desbloqueio' ? 'o desbloqueio' : 'o desbloqueio') + ' às ' + a.horaFim + '.';
+      if (a.horaFim) s += ' Realizado o desbloqueio às ' + a.horaFim + '.';
       return s;
     }
   },
-  /* ---------- CFTV / ENERGIA ---------- */
-  {
-    id: 'cameras_off', cat: 'CFTV', tom: 'cftv', label: 'Câmeras off-line / oscilação', icon: 'camera_off',
+  { id: 'cameras_off', cat: 'CFTV', tom: 'cftv', label: 'Câmeras off-line / oscilação', icon: 'camera_off',
     desc: 'Queda de imagens dos monitores ou oscilação momentânea.',
-    fields: ['hora', 'monitores', 'qtd', 'retorno', 'causa', 'obs'],
+    fields: ['hora','monitores','qtd','retorno','causa','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ficamos sem a conexão das imagens ' +
         (a.monitores ? 'dos ' + a.monitores : (a.qtd ? 'de ' + a.qtd + ' câmera(s)' : '')) + '.';
@@ -1483,10 +1437,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  {
-    id: 'energia', cat: 'CFTV', tom: 'cftv', label: 'Queda de energia', icon: 'energia',
+  { id: 'energia', cat: 'CFTV', tom: 'cftv', label: 'Queda de energia', icon: 'energia',
     desc: 'Interrupção de energia em área específica ou geral.',
-    fields: ['hora', 'area', 'duracao', 'causa', 'acionado', 'obs'],
+    fields: ['hora','area','duracao','causa','acionado','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', houve queda de energia' +
         (a.area ? ' na ' + a.area : '') +
@@ -1496,31 +1449,27 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  /* ---------- OPERAÇÃO ---------- */
-  {
-    id: 'ronda', cat: 'Operação', tom: 'oper', label: 'Ronda com constatação', icon: 'rota',
-    desc: 'Ronda com registro do que foi observado (porta, luminária, acesso).',
-    fields: ['hora', 'por', 'onde', 'achado', 'acionado', 'obs'],
+  { id: 'ronda', cat: 'Operação', tom: 'oper', label: 'Ronda com constatação', icon: 'rota',
+    desc: 'Ronda com registro do que foi observado.',
+    fields: ['hora','por','onde','achado','acionado','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' em ronda ' + a.onde +
         (a.achado ? ', constatou ' + a.achado : ', nada consta') + '.' +
         (a.acionado ? ' Foi acionado ' + a.acionado + '.' : '');
     }
   },
-  {
-    id: 'evento', cat: 'Operação', tom: 'oper', label: 'Montagem / desmontagem de evento', icon: 'festa',
+  { id: 'evento', cat: 'Operação', tom: 'oper', label: 'Montagem / desmontagem de evento', icon: 'festa',
     desc: 'Acompanhamento de equipe de eventos nos pisos.',
-    fields: ['hora', 'evento', 'local', 'responsavel', 'obs'],
+    fields: ['hora','evento','local','responsavel','obs'],
     tpl: function (a) {
       return 'Eventos: ' + a.evento +
         (a.local ? ' — ' + a.local : '') +
         (a.responsavel ? '. Responsável: ' + a.responsavel : '') + '.';
     }
   },
-  {
-    id: 'vip', cat: 'Operação', tom: 'oper', label: 'Desembarque / autoridade', icon: 'vip',
+  { id: 'vip', cat: 'Operação', tom: 'oper', label: 'Desembarque / autoridade', icon: 'vip',
     desc: 'Chegada de autoridades, VIPs ou hóspede de escolta.',
-    fields: ['hora', 'quem', 'veiculo', 'placa', 'destino', 'acompanhante', 'obs'],
+    fields: ['hora','quem','veiculo','placa','destino','acompanhante','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.quem + ' chegou ao empreendimento' +
         (a.veiculo ? ' em ' + a.veiculo : '') +
@@ -1529,10 +1478,9 @@ var ROTINA_ACOES = [
         (a.acompanhante ? '. Acompanhamento feito por ' + a.acompanhante : '') + '.';
     }
   },
-  {
-    id: 'np', cat: 'Operação', tom: 'oper', label: 'Conferência NP (Não Perturbe)', icon: 'np',
-    desc: 'Verificação de UHs com placa NP em conjunto com o mensageiro.',
-    fields: ['hora', 'por', 'unidades', 'resultado', 'solicitante', 'obs'],
+  { id: 'np', cat: 'Operação', tom: 'oper', label: 'Conferência NP (Não Perturbe)', icon: 'np',
+    desc: 'Verificação de UHs com placa NP com o mensageiro.',
+    fields: ['hora','por','unidades','resultado','solicitante','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' realizou a conferência das NPs' +
         (a.solicitante ? ' a pedido de ' + a.solicitante : '') + '. ' +
@@ -1540,10 +1488,9 @@ var ROTINA_ACOES = [
         (a.resultado || 'Nada consta.');
     }
   },
-  {
-    id: 'manutencao', cat: 'Operação', tom: 'limpeza', label: 'Acompanhamento de manutenção', icon: 'manut',
-    desc: 'Acompanhamento de prestador de serviço (Ariel, M17, Sudoeste, Fini).',
-    fields: ['hora', 'por', 'empresa', 'funcionarios', 'servico', 'local', 'horaFim', 'obs'],
+  { id: 'manutencao', cat: 'Operação', tom: 'limpeza', label: 'Acompanhamento de manutenção', icon: 'manut',
+    desc: 'Acompanhamento de prestador (Ariel, M17, Sudoeste, Fini).',
+    fields: ['hora','por','empresa','funcionarios','servico','local','horaFim','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ' + a.empresa +
         (a.funcionarios ? ' com os funcionários ' + a.funcionarios : '') +
@@ -1554,11 +1501,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  /* ---------- LIMPEZA / OCORRÊNCIAS GERAIS ---------- */
-  {
-    id: 'gaiolas', cat: 'Geral', tom: 'limpeza', label: 'Lavanderia Ariel — gaiolas', icon: 'gaiola',
-    desc: 'Entrega / retirada de gaiolas de enxoval pela Ariel Lavanderia.',
-    fields: ['hora', 'entregues', 'retiradas', 'funcionarios', 'horaFim', 'obs'],
+  { id: 'gaiolas', cat: 'Geral', tom: 'limpeza', label: 'Lavanderia Ariel — gaiolas', icon: 'gaiola',
+    desc: 'Entrega / retirada de gaiolas de enxoval pela Ariel.',
+    fields: ['hora','entregues','retiradas','funcionarios','horaFim','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', a empresa Ariel Lavanderia compareceu para realizar ' +
         'entrega de ' + (a.entregues || '0') + ' e retirada de ' + (a.retiradas || '0') +
@@ -1569,10 +1514,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  {
-    id: 'achados', cat: 'Geral', tom: 'pink', label: 'Achados e perdidos', icon: 'achados',
-    desc: 'Objeto encontrado, protocolado e/ou devolvido ao proprietário.',
-    fields: ['hora', 'por', 'objeto', 'local', 'protocolo', 'devolvido', 'quemRetirou', 'obs'],
+  { id: 'achados', cat: 'Geral', tom: 'pink', label: 'Achados e perdidos', icon: 'achados',
+    desc: 'Objeto encontrado, protocolado e/ou devolvido.',
+    fields: ['hora','por','objeto','local','protocolo','devolvido','quemRetirou','obs'],
     tpl: function (a) {
       var s = 'Às ' + a.hora + ', ' + a.por + ' encontrou ' + a.objeto +
         (a.local ? ' ' + a.local : '') + '.';
@@ -1582,10 +1526,9 @@ var ROTINA_ACOES = [
       return s;
     }
   },
-  {
-    id: 'vazamento', cat: 'Geral', tom: 'cftv', label: 'Vazamento de água', icon: 'gota',
+  { id: 'vazamento', cat: 'Geral', tom: 'cftv', label: 'Vazamento de água', icon: 'gota',
     desc: 'Vazamento em UH, banheiro, cozinha ou área técnica.',
-    fields: ['hora', 'por', 'local', 'origem', 'acionado', 'desfecho', 'obs'],
+    fields: ['hora','por','local','origem','acionado','desfecho','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' identificou um vazamento de água' +
         (a.local ? ' no ' + a.local : '') +
@@ -1594,20 +1537,18 @@ var ROTINA_ACOES = [
         (a.desfecho ? '. ' + a.desfecho : '') + '.';
     }
   },
-  {
-    id: 'reclamacao', cat: 'Geral', tom: 'pink', label: 'Reclamação de hóspede', icon: 'reclamacao',
+  { id: 'reclamacao', cat: 'Geral', tom: 'pink', label: 'Reclamação de hóspede', icon: 'reclamacao',
     desc: 'Reclamação de barulho, som alto, odor ou conduta.',
-    fields: ['hora', 'por', 'unidade', 'reclamacao', 'acao', 'desfecho', 'obs'],
+    fields: ['hora','por','unidade','reclamacao','acao','desfecho','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', ' + a.por + ' atendeu reclamação do ' + a.unidade + ' referente a ' +
         a.reclamacao + '. Ação adotada: ' + a.acao +
         (a.desfecho ? '. ' + a.desfecho : '') + '.';
     }
   },
-  {
-    id: 'porta_emerg', cat: 'Geral', tom: 'seg', label: 'Porta de emergência', icon: 'porta',
+  { id: 'porta_emerg', cat: 'Geral', tom: 'seg', label: 'Porta de emergência', icon: 'porta',
     desc: 'Porta corta-fogo que não está travando ou obstruída.',
-    fields: ['hora', 'por', 'local', 'situacao', 'acionado', 'obs'],
+    fields: ['hora','por','local','situacao','acionado','obs'],
     tpl: function (a) {
       return 'Às ' + a.hora + ', foi identificado que ' + a.local + ' está ' + a.situacao + '.' +
         (a.acionado ? ' Foi acionado ' + a.acionado + '.' : '') +
@@ -1617,7 +1558,6 @@ var ROTINA_ACOES = [
 ];
 var ACAO_CATEGORIAS = ['Acesso', 'Saúde', 'Elevadores', 'CFTV', 'Operação', 'Geral'];
 
-/* ---------- campos por ação ---------- */
 function acaoCampos() {
   return {
     hora:        { name: 'hora', label: 'Horário', value: agoraHHMM(), req: true, ph: '14:30' },
@@ -1665,17 +1605,17 @@ function acaoCampos() {
     veiculo:     { name: 'veiculo', label: 'Veículo', ph: 'Ex.: Range Rover' },
     placa:       { name: 'placa', label: 'Placa', ph: 'Ex.: SSS4B44' },
     unidades:    { name: 'unidades', label: 'UHs verificadas', ph: 'Ex.: UH-1504, UH-1017, UH-818' },
-    resultado:   { name: 'resultado', label: 'Resultado', ph: 'Ex.: todas sem hóspede, mas com pertences no local' },
+    resultado:   { name: 'resultado', label: 'Resultado', ph: 'Ex.: todas sem hóspede, mas com pertences' },
     empresa:     { name: 'empresa', label: 'Empresa', req: true, ph: 'Ex.: Ariel Lavanderia, M17, Sudoeste, Fini' },
     funcionarios:{ name: 'funcionarios', label: 'Funcionários / RG / CPF', type: 'textarea', ph: 'Nome (RG/CPF) — um por linha' },
-    servico:     { name: 'servico', label: 'Serviço executado', req: true, ph: 'Ex.: limpeza de coifa, dedetização, manutenção do vestiário' },
+    servico:     { name: 'servico', label: 'Serviço executado', req: true, ph: 'Ex.: limpeza de coifa, dedetização' },
     entregues:   { name: 'entregues', label: 'Gaiolas entregues', ph: 'Ex.: 12' },
     retiradas:   { name: 'retiradas', label: 'Gaiolas retiradas', ph: 'Ex.: 15' },
-    objeto:      { name: 'objeto', label: 'O que foi encontrado', req: true, ph: 'Ex.: um molho de chaves de carro' },
+    objeto:      { name: 'objeto', label: 'O que foi encontrado', req: true, ph: 'Ex.: um molho de chaves' },
     protocolo:   { name: 'protocolo', label: 'Protocolo (etiqueta)', ph: 'Ex.: 202607-90' },
     devolvido:   { name: 'devolvido', label: 'Já devolvido?', type: 'select', value: 'Não', options: ['Não', 'Sim'] },
     quemRetirou: { name: 'quemRetirou', label: 'Quem retirou', ph: 'Ex.: Sr. Jhon Zarif' },
-    origem:      { name: 'origem', label: 'Origem do vazamento', ph: 'Ex.: mangueira da privada, tubulação do teto' },
+    origem:      { name: 'origem', label: 'Origem do vazamento', ph: 'Ex.: mangueira da privada' },
     reclamacao:  { name: 'reclamacao', label: 'Motivo da reclamação', req: true, ph: 'Ex.: som alto na UH-1609' },
     obs:         { name: 'obs', label: 'Observações complementares', type: 'textarea', full: true, ph: 'Opcional — qualquer detalhe adicional.' }
   };
@@ -1696,13 +1636,11 @@ function normalizarHora(h) {
   return m[1] + 'h' + (m[2] || '00') + 'min';
 }
 
-/* ---------- tela de ações rápidas ---------- */
 function viewAcoesRapidas() {
   var h = '<div class="sect-head"><h2>' + ic('bolt') + 'Ações rápidas do dia a dia</h2>' +
-          '<span class="hint">' + ROTINA_ACOES.length + ' modelos prontos, baseados no histórico real</span></div>';
-  h += '<div class="hintline">Clique na ação, preencha os campos específicos e o sistema monta o texto ' +
-       'no padrão exato dos resumos do WhatsApp (<b>Às 14h30min, Sr. Italo (Segurança) realizou…</b>). ' +
-       'Dá para copiar para o grupo ou registrar como ocorrência do plantão.</div>';
+          '<span class="hint">' + ROTINA_ACOES.length + ' modelos prontos</span></div>';
+  h += '<div class="hintline">Clique na ação, preencha os campos e o sistema monta o texto ' +
+       'no padrão dos resumos do WhatsApp (<b>Às 14h30min, Sr. Italo (Segurança) realizou…</b>).</div>';
   h += '<div class="acao-cats">';
   ACAO_CATEGORIAS.forEach(function (cat) {
     var items = ROTINA_ACOES.filter(function (a) { return a.cat === cat; });
@@ -1727,7 +1665,6 @@ function catIcon(c) {
            'Operação': 'rota', 'Geral': 'list' }[c] || 'grid';
 }
 
-/* ---------- FORMULÁRIO de ação rápida ---------- */
 function acaoForm(id) {
   var ac = acharAcao(id);
   if (!ac) { toast('Ação não encontrada.', 'err'); return; }
@@ -1756,7 +1693,6 @@ function acaoForm(id) {
     return txt;
   }
 
-  /* monta a lista de sugestões a partir do histórico, filtrando por palavras-chave da ação */
   function sugestoesPara() {
     var keywords = ac.sugKeys || [];
     if (!keywords.length) return [];
@@ -1775,10 +1711,8 @@ function acaoForm(id) {
                '<div class="previa-head">' + ic('file') + 'Texto pronto — padrão do resumo de plantão</div>' +
                '<div class="previa-txt" id="previaTxt"></div>' +
                '<div class="item-acts" style="margin-top:12px;gap:8px;flex-wrap:wrap">' +
-                 '<button class="btn sm" type="button" data-copy-previa>' + ic('copy') + 'Copiar texto' +
-                 '<span style="flex:1"></span>' +
-               '</button>' +
-               '<button class="btn sm" type="button" data-copy-whats>' + ic('chat') + 'Copiar com cabeçalho</button>' +
+                 '<button class="btn sm" type="button" data-copy-previa>' + ic('copy') + 'Copiar texto</button>' +
+                 '<button class="btn sm" type="button" data-copy-whats>' + ic('chat') + 'Copiar com cabeçalho</button>' +
                '</div></div>';
   if (sug.length) {
     extra += '<div class="sug-wrap">' +
@@ -1823,7 +1757,6 @@ function acaoForm(id) {
         var cab = (d.data ? dataBR(d.data) : '') + (ac.label ? ' — ' + ac.label : '') + '\n\n';
         copyText(cab + (form && form.__textoGerado || ''), 'Texto com cabeçalho copiado.');
       };
-      /* sugerir a partir do histórico: preenche o campo de observação com o trecho */
       bd.querySelectorAll('[data-sug-id]').forEach(function (b) {
         b.onclick = function () {
           var oc = occurrencesSorted().filter(function (x) { return x.id === b.getAttribute('data-sug-id'); })[0];
@@ -1834,7 +1767,7 @@ function acaoForm(id) {
               '[Base — ' + (oc.date || '') + '] ' + String(oc.text || '').slice(0, 500);
             atualizar();
             obs.focus();
-            toast('Trecho do histórico colado em Observações. Ajuste conforme necessário.');
+            toast('Trecho do histórico colado em Observações.');
           }
         };
       });
@@ -1849,18 +1782,16 @@ function acaoForm(id) {
         text: txt, createdAt: nowISO()
       });
       save(); render();
-      toast('Ocorrência registrada. O texto já está disponível no Painel.');
+      toast('Ocorrência registrada.');
     }
   });
 }
-/* palavras-chave de sugestão por ação */
 (function(){
   var map = {
-    cofre: ['cofre'],
-    porta: ['abertura da porta','leitura de porta','porta do UH'],
+    cofre: ['cofre'], porta: ['abertura da porta','leitura de porta','porta do UH'],
     chave: ['chave 3PLS','liberação da chave','chave do almoxarifado'],
     cracha: ['crachá','refeitório'],
-    ambulatorio: ['ambulatório','mal-estar','passou mal','atendimento médico','enfermaria'],
+    ambulatorio: ['ambulatório','mal-estar','passou mal','atendimento médico'],
     bombeiro: ['bombeir','fumaça','princípio de incêndio'],
     elevador_falha: ['entrou em NAV','entrou em PKS','entrou em modo','elevador H','elevador S','elevador C'],
     elevador_bloq: ['bloqueio dos elevadores','desbloqueio','elevadores laranja','elevadores amarelo'],
@@ -1880,9 +1811,6 @@ function acaoForm(id) {
   ROTINA_ACOES.forEach(function (a) { if (map[a.id]) a.sugKeys = map[a.id]; });
 })();
 
-/* ============================================================
-   ROTINA
-   ============================================================ */
 function viewRotina() {
   var list = S.routines.filter(function (r) { return freqMatch(r.freq, UI.routinePeriod); });
   if (UI.routineFilter !== 'Todas') list = list.filter(function (r) { return r.area === UI.routineFilter; });
@@ -1965,9 +1893,6 @@ function viewRotina() {
   return h;
 }
 
-/* ============================================================
-   CONTATOS
-   ============================================================ */
 function viewContatos() {
   var list = S.contacts.filter(function (c) {
     if (UI.contactArea !== 'Todas' && c.area !== UI.contactArea) return false;
@@ -1986,14 +1911,15 @@ function viewContatos() {
     kpi('Exibindo', list.length, UI.contactQ || UI.contactArea !== 'Todas' ? 'filtro ativo' : 'sem filtro', 'cyan', 'search') +
   '</div>';
   h += '<div class="tools mt">' +
-    '<input class="inp grow" data-cq placeholder="🔍 Buscar por nome, área, função, ramal, telefone, e-mail ou cartão..." value="' + esc(UI.contactQ) + '">' +
+    '<input class="inp grow" data-cq placeholder="🔍 Buscar nome, área, telefone, e-mail ou cartão..." value="' + esc(UI.contactQ) + '">' +
     '<select class="sel" data-ca><option value="Todas">Todas as áreas</option>' +
       contactAreas().map(function (a) { return '<option value="' + esc(a) + '"' + (UI.contactArea === a ? ' selected' : '') + '>' + esc(a) + '</option>'; }).join('') +
     '</select>' +
     '<button class="btn sm" data-act="contact-csv">' + ic('down') + 'CSV</button>' +
     '<button class="btn primary sm" data-act="add-contact">' + ic('plus') + 'Novo contato</button>' +
   '</div>';
-  if (!list.length) { h += '<div class="card">' + emptyBox('Nenhum contato encontrado', 'Ajuste a busca ou cadastre um novo contato.', 'users') + '</div>'; return h; }
+  if (!list.length) { h += '<div class="card">' + emptyBox(S.contacts.length ? 'Nenhum contato encontrado' : 'Nenhum contato cadastrado',
+    S.contacts.length ? 'Ajuste a busca ou os filtros.' : 'Cadastre o primeiro contato ou restaure um backup.', 'users') + '</div>'; return h; }
   Object.keys(byArea).sort(function (a, b) { return a.localeCompare(b, 'pt-BR'); }).forEach(function (a) {
     h += '<div class="sect-head"><h2>' + ic('building') + esc(a) + '</h2><span class="hint">' + byArea[a].length + ' contato(s)</span></div>';
     h += '<div class="grid-3">' + byArea[a].map(function (c) {
@@ -2038,9 +1964,6 @@ function iniciais(n) {
   return ((p[0] || '?')[0] + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase();
 }
 
-/* ============================================================
-   PROCEDIMENTOS
-   ============================================================ */
 function viewProcedimentos() {
   var list = UI.procCat === 'Todas' ? S.procedures : S.procedures.filter(function (p) { return (p.cat || 'Geral') === UI.procCat; });
   var h = '';
@@ -2074,7 +1997,7 @@ function viewProcedimentos() {
         '<span class="pill info">' + (p.steps || []).length + ' passos</span>' +
         (runs.length ? '<span class="pill ok">' + runs.length + ' execução(ões)</span>' : '<span class="pill mute">nunca executado</span>') +
       '</div>' +
-      (last ? '<div class="hintline">Última execução: ' + esc(fmtDT(last.at)) + (last.by ? ' por ' + esc(last.by) : '') + '</div>' : '') +
+      (last ? '<div class="hintline">Última execução: ' + esc(fmtDT(last.at)) + '</div>' : '') +
       '<div class="steps" data-checklist="' + p.id + '">' + (p.steps || []).map(function (s, i) {
         return '<div class="step" data-act="step-toggle" data-id="' + p.id + '" data-i="' + i + '">' +
           '<div class="chk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
@@ -2090,9 +2013,6 @@ function viewProcedimentos() {
   return h;
 }
 
-/* ============================================================
-   EQUIPAMENTOS / CFTV
-   ============================================================ */
 function viewEqList() {
   var list = S.equipments.filter(function (e) {
     if (UI.eqLocal !== 'Todos' && (e.local || '—') !== UI.eqLocal) return false;
@@ -2296,9 +2216,6 @@ function auditar() {
     total: dupIP.length + badIP.length + dupName.length + noIP.length + noPiso.length + noLocal.length };
 }
 
-/* ============================================================
-   MANUAL
-   ============================================================ */
 function manualCard(m) {
   return '<div class="card card-pad">' +
     '<div style="display:flex;gap:12px;align-items:flex-start">' +
@@ -2315,7 +2232,7 @@ function manualCard(m) {
     ((m.topics || []).length ? '<ul style="margin:8px 0 0;padding-left:17px;font-size:.76rem;color:var(--txt-3);line-height:1.75">' +
       m.topics.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' : '') +
     '<div style="display:flex;gap:6px;margin-top:13px;flex-wrap:wrap">' +
-      (m.file ? '<button class="btn sm" data-act="copy-path" data-id="' + m.id + '" title="Copiar caminho do arquivo">' + ic('copy') + 'Copiar caminho</button>' : '') +
+      (m.file ? '<button class="btn sm" data-act="copy-path" data-id="' + m.id + '" title="Copiar caminho">' + ic('copy') + 'Copiar caminho</button>' : '') +
       '<span style="flex:1"></span>' +
       '<button class="btn icon sm" data-act="edit-manual" data-id="' + m.id + '" title="Editar">' + ic('edit') + '</button>' +
       '<button class="btn icon sm danger" data-act="del-manual" data-id="' + m.id + '" title="Excluir">' + ic('trash') + '</button>' +
@@ -2343,9 +2260,6 @@ function viewManual() {
   return h;
 }
 
-/* ============================================================
-   RENDER
-   ============================================================ */
 var RENDER = {
   painel: viewPainel, rotina: viewRotina, contatos: viewContatos,
   procedimentos: viewProcedimentos, cftv: viewCFTV, manual: viewManual
@@ -2409,9 +2323,6 @@ function syncChecklist(pid) {
   return { done: done, total: steps.length };
 }
 
-/* ============================================================
-   AÇÕES (delegação)
-   ============================================================ */
 function findColl(arr, id) { for (var i = 0; i < arr.length; i++) if (arr[i].id === id) return arr[i]; return null; }
 document.addEventListener('click', function (e) {
   var el = e.target.closest('[data-page],[data-act],[data-freq],[data-ct],[data-cs],[data-ctab],[data-acao]');
@@ -2575,9 +2486,6 @@ function softRender(pageId, input) {
   setSaved();
 }
 
-/* ============================================================
-   FORMULÁRIOS
-   ============================================================ */
 function dataBR(iso) {
   if (!iso) return '';
   var p = String(iso).split('-');
@@ -2618,7 +2526,7 @@ function occurrenceForm(item) {
 function importOccurrenceForm() {
   modal({
     title: 'Colar resumo do WhatsApp', icon: 'backup', saveLabel: 'Registrar',
-    intro: 'Copie a mensagem no WhatsApp (toque e segure → Copiar) e cole abaixo. A data e a hora são reconhecidas automaticamente quando aparecem no texto.',
+    intro: 'Copie a mensagem no WhatsApp e cole abaixo. A data e a hora são reconhecidas automaticamente.',
     fields: [{ name: 'text', label: 'Mensagem colada', type: 'textarea', req: true, full: true,
       ph: '07:00 - Natanael: Bom dia. Segue resumo do Plantão Noturno...' }],
     onSave: function (d) {
@@ -2669,11 +2577,11 @@ function routineForm(item) {
     title: e.id ? 'Editar tarefa' : 'Nova tarefa de rotina', icon: 'check',
     fields: [
       { name: 'title', label: 'Tarefa', req: true, value: e.title, full: true, ph: 'Ex.: Ronda noturna do perímetro' },
-      { name: 'area', label: 'Área / setor', value: e.area || 'Segurança', ph: 'Segurança, CFTV, Manutenção...' },
+      { name: 'area', label: 'Área / setor', value: e.area || 'Segurança' },
       { name: 'freq', label: 'Frequência', type: 'select', options: ['Diária', 'Semanal', 'Mensal'], value: e.freq || 'Diária' },
       { name: 'shift', label: 'Turno', type: 'select', options: ['Todos', 'Manhã', 'Tarde', 'Noite'], value: e.shift || 'Todos' },
       { name: 'time', label: 'Horário', value: e.time || '', ph: '08:00' },
-      { name: 'how', label: 'Como executar / observações', type: 'textarea', value: e.how, full: true, ph: 'Passos, cuidados e o que registrar.' }
+      { name: 'how', label: 'Como executar / observações', type: 'textarea', value: e.how, full: true }
     ],
     onSave: function (d) {
       if (e.id) { Object.assign(e, d); toast('Tarefa atualizada.'); }
@@ -2688,7 +2596,7 @@ function contactForm(item) {
     title: e.id ? 'Editar contato' : 'Novo contato', icon: 'users',
     fields: [
       { name: 'name', label: 'Nome', req: true, value: e.name, full: true },
-      { name: 'area', label: 'Área / setor', value: e.area || 'Segurança', ph: 'Segurança, Recepção, Manutenção...' },
+      { name: 'area', label: 'Área / setor', value: e.area || 'Segurança' },
       { name: 'role', label: 'Função / cargo', value: e.role },
       { name: 'phone', label: 'Telefone / celular', value: e.phone, ph: '(11) 90000-0000' },
       { name: 'ext', label: 'Ramal', value: e.ext },
@@ -2711,7 +2619,7 @@ function procedureForm(item) {
     title: e.id ? 'Editar procedimento' : 'Novo procedimento', icon: 'list', wide: true,
     fields: [
       { name: 'title', label: 'Título do procedimento', req: true, value: e.title, full: true, ph: 'Ex.: Abertura de portas (Lock Service 3G)' },
-      { name: 'cat', label: 'Categoria', value: e.cat || 'Geral', ph: 'CFTV, Fechaduras, Ronda, Emergência...' },
+      { name: 'cat', label: 'Categoria', value: e.cat || 'Geral' },
       { name: 'owner', label: 'Responsável', value: e.owner || 'Segurança' },
       { name: 'steps', label: 'Passos — um por linha', type: 'textarea', value: (e.steps || []).join('\n'), full: true,
         ph: 'Conecte o cabo USB na fechadura\nAbra o LOCK SERVICE\n...' }
@@ -2801,9 +2709,6 @@ function manualForm(item) {
   });
 }
 
-/* ============================================================
-   EXPORTAÇÕES / BACKUP
-   ============================================================ */
 function exportCamCSV() {
   var rows = [['Nome', 'Tipo', 'Piso', 'Local', 'IP', 'Modelo', 'Situação', 'Parada desde']];
   S.cameras.forEach(function (c) {
@@ -2863,9 +2768,6 @@ document.getElementById('fileIn').addEventListener('change', function (ev) {
   fr.readAsText(f);
 });
 
-/* ============================================================
-   INICIALIZAÇÃO
-   ============================================================ */
 function clock() {
   var el = document.getElementById('clock');
   if (el) el.textContent = new Date().toLocaleTimeString('pt-BR');
